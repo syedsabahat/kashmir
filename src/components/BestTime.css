@@ -1,0 +1,38 @@
+.best-time { padding: 8rem 0; background: linear-gradient(180deg,var(--midnight) 0%,var(--deep-navy) 100%); }
+.bt-container { max-width: 1200px; margin: 0 auto; padding: 0 4rem; }
+.bt-header { margin-bottom: 4rem; }
+.bt-layout { display: grid; grid-template-columns: 280px 1fr; gap: 2px; border: 1px solid rgba(42,157,143,0.15); min-height: 420px; }
+.bt-selectors { display: flex; flex-direction: column; background: rgba(13,31,53,0.5); }
+.season-btn { display: flex; align-items: center; gap: 1rem; padding: 1.5rem; background: none; border: none; border-bottom: 1px solid rgba(42,157,143,0.1); cursor: pointer; text-align: left; transition: all 0.3s; position: relative; }
+.season-btn:hover { background: rgba(255,255,255,0.03); }
+.season-btn.active { background: rgba(255,255,255,0.05); border-left: 3px solid var(--accent,var(--gold)); }
+.season-icon { font-size: 1.8rem; flex-shrink: 0; }
+.season-name { display: block; font-family: var(--font-display); font-size: 1.2rem; color: var(--cream); line-height: 1.2; }
+.season-months { display: block; font-size: 0.68rem; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 0.2rem; }
+.ideal-badge { position: absolute; top: 0.75rem; right: 0.75rem; font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal-light); border: 1px solid var(--teal); padding: 0.15rem 0.5rem; }
+.bt-detail { position: relative; overflow: hidden; transition: all 0.5s ease; }
+.bt-detail-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 80% at 80% 20%, var(--bg,#1a6b6b),transparent 60%), linear-gradient(160deg,rgba(8,17,31,0.8) 0%,rgba(8,17,31,0.6) 100%); opacity: 0.7; }
+.bt-detail-content { position: relative; z-index: 2; padding: 3rem; height: 100%; display: flex; flex-direction: column; gap: 1.5rem; }
+.bt-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.detail-mood { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent,var(--teal-light)); margin-bottom: 0.4rem; }
+.detail-season { font-family: var(--font-display); font-size: 2.5rem; font-weight: 300; color: var(--cream); line-height: 1.1; }
+.detail-months { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem; }
+.detail-temp { text-align: right; flex-shrink: 0; }
+.temp-num { display: block; font-family: var(--font-display); font-size: 1.6rem; color: var(--accent,var(--cream)); font-weight: 600; }
+.temp-label { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+.detail-desc { font-size: 0.95rem; color: rgba(244,237,224,0.8); line-height: 1.8; max-width: 600px; }
+.detail-highlights { margin-top: auto; }
+.highlights-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem; }
+.highlights-list { display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; }
+.highlight-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--cream); }
+.highlight-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent,var(--teal-light)); flex-shrink: 0; }
+@media (max-width: 900px) {
+  .bt-container { padding: 0 1.5rem; }
+  .bt-layout { grid-template-columns: 1fr; }
+  .bt-selectors { flex-direction: row; overflow-x: auto; }
+  .season-btn { min-width: 140px; flex-direction: column; align-items: center; text-align: center; border-bottom: none; border-right: 1px solid rgba(42,157,143,0.1); }
+  .season-btn.active { border-left: none; border-top: 3px solid var(--accent,var(--gold)); }
+  .ideal-badge { display: none; }
+  .bt-top { flex-direction: column; gap: 1rem; }
+  .detail-temp { text-align: left; }
+}
